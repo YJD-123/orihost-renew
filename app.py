@@ -24,8 +24,8 @@ ORIHOST_REMEMBER = (
 ).strip()
 ORIHOST_SERVER_IDS = os.environ.get('ORIHOST_SERVER_IDS') or ""  # 单服：短ID 或 完整 UUID
 EMAIL = os.environ.get('EMAIL') or os.environ.get('ORIHOST_EMAIL') or ""  # 仅用于 TG 通知脱敏展示
-TG_BOT_TOKEN = os.environ.get('') or ""
-TG_CHAT_ID = os.environ.get('') or ""
+TG_BOT_TOKEN = os.environ.get('TG_BOT_TOKEN') or ""
+TG_CHAT_ID = os.environ.get('TG_CHAT_ID') or ""
 # 兼容 TG_BOT="chat_id,bot_token" 写法
 _TG_BOT = os.environ.get('TG_BOT') or ""
 if not (TG_BOT_TOKEN and TG_CHAT_ID) and ',' in _TG_BOT:
