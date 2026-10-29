@@ -24,8 +24,8 @@ ORIHOST_REMEMBER = (
 ).strip()
 ORIHOST_SERVER_IDS = os.environ.get('ORIHOST_SERVER_IDS') or ""  # 单服：短ID 或 完整 UUID
 EMAIL = os.environ.get('EMAIL') or os.environ.get('ORIHOST_EMAIL') or ""  # 仅用于 TG 通知脱敏展示
-TG_BOT_TOKEN = os.environ.get('TG_BOT_TOKEN') or ""
-TG_CHAT_ID = os.environ.get('TG_CHAT_ID') or ""
+TG_BOT_TOKEN = os.environ.get('8640673762:AAFB4ZDouBnqY_RgaZBZPQBwrbScoQuxixA') or ""
+TG_CHAT_ID = os.environ.get('8632658142') or ""
 # 兼容 TG_BOT="chat_id,bot_token" 写法
 _TG_BOT = os.environ.get('TG_BOT') or ""
 if not (TG_BOT_TOKEN and TG_CHAT_ID) and ',' in _TG_BOT:
@@ -33,8 +33,8 @@ if not (TG_BOT_TOKEN and TG_CHAT_ID) and ',' in _TG_BOT:
     TG_CHAT_ID, TG_BOT_TOKEN = _a.strip(), _b.strip()
 
 BASE_URL = "https://panel.orihost.com"
-SERVER_SHORT_ID = "8651e616"  # 地址栏 /server/ 后面那段
-SERVER_UUID = "8651e616-52e2-46bb-8cbf-74159abb9815"  # 抓包实测：API 要用全量 UUID
+SERVER_SHORT_ID = "5c913162"  # 地址栏 /server/ 后面那段
+SERVER_UUID = "5c913162-e159-4bfa-9c10-8cc67eeaf138"  # 抓包实测：API 要用全量 UUID
 SERVER_URL = f"{BASE_URL}/server/{SERVER_SHORT_ID}"
 API_COOLDOWN = f"{BASE_URL}/api/client/servers/{SERVER_UUID}/renew/cooldown"
 API_BEGIN = f"{BASE_URL}/api/client/servers/{SERVER_UUID}/renew/begin"
